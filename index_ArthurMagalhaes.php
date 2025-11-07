@@ -6,7 +6,6 @@ if (!isset($_SESSION['pessoaIFTO'])) {
 }
 $pessoaIFTO = &$_SESSION['pessoaIFTO'];
 
-// CLASSE BASE
 class Pessoa {
     public $nome;
     public $cpf;
@@ -25,7 +24,6 @@ class Pessoa {
     }
 }
 
-// SUBCLASSES
 class Estudante extends Pessoa {
     public $curso;
 
