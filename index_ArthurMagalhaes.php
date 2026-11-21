@@ -18,9 +18,9 @@ class Pessoa {
     }
 
     public function mostrar_dados() {
-        echo "Tipo: " . $this->tipo . "<br>";
-        echo "Nome: " . $this->nome . "<br>";
-        echo "CPF: " . $this->cpf . "<br>";
+        echo "Tipo: " . htmlspecialchars($this->tipo) . "<br>";
+        echo "Nome: " . htmlspecialchars($this->nome) . "<br>";
+        echo "CPF: " . htmlspecialchars($this->cpf) . "<br>";
     }
 }
 
@@ -34,7 +34,7 @@ class Estudante extends Pessoa {
 
     public function mostrar_dados() {
         parent::mostrar_dados();
-        echo "Curso: " . $this->curso . "<br><hr>";
+        echo "Curso: " . htmlspecialchars($this->curso) . "<br><hr>";
     }
 }
 
@@ -50,8 +50,8 @@ class Professor extends Pessoa {
 
     public function mostrar_dados() {
         parent::mostrar_dados();
-        echo "Função: " . $this->funcao . "<br>";
-        echo "Salário: R$ " . $this->salario . "<br><hr>";
+        echo "Função: " . htmlspecialchars($this->funcao) . "<br>";
+        echo "Salário: R$ " . htmlspecialchars($this->salario) . "<br><hr>";
     }
 }
 
@@ -67,8 +67,8 @@ class Servidor extends Pessoa {
 
     public function mostrar_dados() {
         parent::mostrar_dados();
-        echo "Função: " . $this->funcao . "<br>";
-        echo "Salário: R$ " . $this->salario . "<br><hr>";
+        echo "Função: " . htmlspecialchars($this->funcao) . "<br>";
+        echo "Salário: R$ " . htmlspecialchars($this->salario) . "<br><hr>";
     }
 }
 
